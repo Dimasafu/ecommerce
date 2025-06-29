@@ -7,12 +7,26 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/contact', function () {
     return view('contact');
 })->name ('contact');
+
+Route::get('/decoration', function () {
+    return view('decoration');
+})->name('decoration');
+
+Route::get('/products', [ProductController::class, 'showCatalog'])->name('products');
+Route::get('/produk/{slug}', [ProductController::class, 'show'])->name('products.show');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/{id}', [CartController::class, 'store'])->name('cart.add');
+    Route::delete('/cart/{id}', [CartController::class, 'destroy'])->name('cart.remove');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -61,7 +61,7 @@
                                 data-bs-target="#deleteModal{{ $category->id }}">Hapus</button>
                         </td>
                     </tr>
-
+                    
                     <!-- Modal Edit -->
                     <div class="modal fade" id="editModal{{ $category->id }}" tabindex="-1">
                         <div class="modal-dialog">
@@ -87,6 +87,7 @@
                                                     <img src="{{ asset('storage/' . $category->image) }}"
                                                         alt="{{ $category->name }}" width="80">
                                                 </div>
+                                            @endif 
                                         </div>
                                         <div class="modal-footer">
                                             <button type="submit" class="btn btn-primary">Simpan</button>
