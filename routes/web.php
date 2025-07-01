@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -26,6 +27,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::post('/cart/{id}', [CartController::class, 'store'])->name('cart.add');
     Route::delete('/cart/{id}', [CartController::class, 'destroy'])->name('cart.remove');
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+    Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+    Route::get('/invoice/{id}', [CheckoutController::class, 'showInvoice'])->name('invoice.show');
 });
 
 Route::get('/dashboard', function () {

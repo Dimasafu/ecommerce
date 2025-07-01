@@ -19,14 +19,16 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        $request->merge([
+            'price' => str_replace(['Rp', '.', ','], '', $request->price),
+        ]);
         $request->validate([
             'name' => 'required|string|max:255',
-            'slug' => 'nullable|string|unique:products,slug',
             'description' => 'nullable|string',
             'price' => 'required|numeric',
             'stock' => 'required|integer',
             'category_id' => 'required|exists:categories,id',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
         ]);
 
         $imagePath = null;
@@ -50,15 +52,17 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::findOrFail($id);
+        $request->merge([
+        'price' => str_replace(['Rp', '.', ','], '', $request->price),
+    ]);
 
         $request->validate([
             'name' => 'required|string|max:255',
-            'slug' => 'nullable|string|unique:products,slug,' . $product->id,
             'description' => 'nullable|string',
             'price' => 'required|numeric',
             'stock' => 'required|integer',
             'category_id' => 'required|exists:categories,id',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
         ]);
 
         $imagePath = $product->image;

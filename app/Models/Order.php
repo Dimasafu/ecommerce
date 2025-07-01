@@ -11,7 +11,8 @@ class Order extends Model
         'invoice_number',
         'user_id',
         'total_price',
-        'status'
+        'status',
+        'payment_method', // Added payment_method field
     ];
 
     public function user(): BelongsTo

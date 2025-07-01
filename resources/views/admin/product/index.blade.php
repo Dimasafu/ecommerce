@@ -149,7 +149,7 @@
 
                                 rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
                                 input.value = rupiah ? 'Rp' + rupiah : '';
-                            }
+                            }</script>
                         </div>
                         <div class="mb-3">
                             <label>Stok</label>
