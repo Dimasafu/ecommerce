@@ -1,4 +1,4 @@
-<?
+<?php
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function add(Request $request, Product $product)
+    public function store(Request $request, Product $product)
     {
         $cartItem = Cart::where('user_id', Auth::id())
             ->where('product_id', $product->id)

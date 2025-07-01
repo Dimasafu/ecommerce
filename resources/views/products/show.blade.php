@@ -10,7 +10,7 @@
             <p class="text-lg text-gray-600 mb-4">{{ $product->description }}</p>
             <p class="text-2xl text-pink-600 font-bold mb-6">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
 
-            <form action="{{ route('cart.add', $product->id) }}" method="POST" class="space-y-4">
+            <form action="{{ route('cart.store', $product->id) }}" method="POST" class="space-y-4">
                 @csrf
                 <div>
                     <label class="block text-sm font-semibold mb-1 text-gray-700">Alamat Pengiriman</label>

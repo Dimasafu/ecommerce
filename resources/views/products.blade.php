@@ -47,7 +47,7 @@
                                 <p class="text-pink-600 font-bold mt-1">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                             </div>
                         </a>
-                        <form action="{{ route('cart.add', $product->id) }}" method="POST" class="p-4 pt-0">
+                        <form action="{{ route('cart.store', $product->id) }}" method="POST" class="p-4 pt-0">
                             @csrf
                             <button type="submit"
                                 class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded-lg transition">
