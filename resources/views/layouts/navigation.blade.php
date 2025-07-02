@@ -33,7 +33,7 @@
             <div class="hidden sm:flex items-center space-x-4">
                 @auth
                     @if (Auth::user()->role === 'user')
-                        <a href="#" class="text-gray-600 hover:text-gray-800">
+                        <a href="{{ route('cart.index') }}" class="text-gray-600 hover:text-gray-800">
                             <i class="fas fa-shopping-cart text-lg"></i>
                         </a>
                     @endif

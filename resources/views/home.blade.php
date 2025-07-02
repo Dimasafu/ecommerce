@@ -89,8 +89,9 @@
 <div id="produk" class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Katalog Produk</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6">
             @forelse ($products as $product)
+            <a href="{{ route('products.show', $product->slug) }}">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-48 object-cover">
                     <div class="p-4">

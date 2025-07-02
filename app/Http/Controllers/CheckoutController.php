@@ -55,7 +55,7 @@ class CheckoutController extends Controller
 
     public function showInvoice($id)
     {
-        $order = Order::with(['orderItems.product', 'user'])->findOrFail($id);
+        $order = Order::with(['items.product', 'user'])->findOrFail($id);
         return view('invoice.show', compact('order'));
     }
 }
