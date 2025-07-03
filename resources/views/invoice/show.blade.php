@@ -54,6 +54,9 @@
         <a href="{{ route('home') }}" class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded transition duration-200">
             ← Kembali ke Home
         </a>
+        <a href="{{ route('orders.user') }}" class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded transition duration-200">
+            ← Lihat Riwayat Pesanan
+        </a>
     </div>
 </div>
 @endsection

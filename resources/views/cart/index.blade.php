@@ -36,6 +36,11 @@
             </div>
         @empty
             <p class="text-gray-600">Keranjang masih kosong.</p>
+            <div class="text-center mt-4">
+            <a href="{{ route('products') }}" class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded transition duration-200">
+            ← Kembali ke Berbelanja
+            </a>
+            </div>
         @endforelse
 
         @if ($cartItems->count())

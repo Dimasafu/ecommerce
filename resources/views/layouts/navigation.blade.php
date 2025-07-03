@@ -20,6 +20,7 @@
                         <x-nav-link :href="route('products')" :active="request()->routeIs('products')">Product</x-nav-link>
                         <x-nav-link :href="route('decoration')" :active="request()->routeIs('decoration')">Decoration</x-nav-link>
                         <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">Contact</x-nav-link>
+                        <x-nav-link :href="route('orders.user')" :active="request()->routeIs('orders.user')">Orders</x-nav-link>
                     @endif
                 @else
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">Home</x-nav-link>

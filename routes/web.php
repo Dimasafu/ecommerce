@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
     Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
     Route::get('/invoice/{id}', [CheckoutController::class, 'showInvoice'])->name('invoice.show');
+    Route::get('/orders', [OrderController::class, 'userOrders'])->name('orders.user')->middleware('auth');
+
 });
 
 Route::get('/dashboard', function () {
@@ -47,6 +49,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('admin/kategori', CategoryController::class);
     Route::resource('admin/product', ProductController::class);
     Route::get('/admin/pesanan', [OrderController::class, 'index'])->name('admin.orders.index');
+    Route::put('/admin/orders/{id}', [OrderController::class, 'update'])->name('admin.orders.update');
 });
 
 
