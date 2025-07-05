@@ -4,7 +4,7 @@
     <div class="bg-white">
         <!-- Banner Promo -->
         <div class="relative bg-cover bg-center h-[400px] md:h-[420px] flex items-center justify-center"
-             style="background-image: url('{{ asset('images/banner.jpg') }}');">
+             style="background-image: url('{{ asset('images/florist.jpg') }}');">
             <div class="bg-white bg-opacity-90 rounded-xl p-9 md:p-10 text-center shadow-lg max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bunga Spesial untuk Momen Spesial</h2>
                 <p class="text-gray-600 text-lg text-align-center">

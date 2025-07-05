@@ -5,7 +5,7 @@
 <section class="bg-white py-16">
     <div class="container mx-auto flex flex-col md:flex-row items-center px-6 gap-8">
         <div class="md:w-1/2">
-            <img src="{{ asset('images/dekorasi.jpg') }}" alt="Dekorasi" class="rounded-xl shadow-lg">
+            <img src="{{ asset('images/dekorasi.jpg') }}" alt="Dekorasi" class="rounded-3xl shadow-xl w-full max-w-md mx-auto">
         </div>
         <div class="md:w-1/2 text-center md:text-left">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -52,7 +52,7 @@
         <h2 class="text-2xl font-bold text-center mb-10 text-gray-800">Jenis Acara Spesial Anda</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-                <img src="{{ asset('images/sweet17.jpg') }}" alt="Sweet Seventeen" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/sweetseventeen.jpg') }}" alt="Sweet Seventeen" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h3 class="text-xl font-semibold text-gray-800">Sweet Seventeen</h3>
                     <p class="text-gray-600 mt-2">Acara sweet 17 merupakan momen yang menunjukkan bahwa Anda sudah dewasa. Jadikan hari spesial ini tak terlupakan bersama dekorasi kami.</p>

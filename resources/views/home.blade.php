@@ -48,8 +48,8 @@
                 Kirim Bunga & Gift ke seluruh Indonesia. <br>
                 <span class="font-semibold">Garansi Kualitas & Pengiriman Tepat Waktu</span>
             </p>
-            <a href="#produk" class="bg-blue-800 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg shadow transition">
-                Pilih Tujuan Pengiriman
+            <a href="#produk" class="inline-block px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-lg transition">
+                Pilih Bunga & Gift
             </a>
             <div class="flex space-x-6 mt-6 text-gray-700 justify-center md:justify-start">
                 <div><span class="font-bold text-xl">2000+</span><br><span class="text-sm">Order/bulan</span></div>
